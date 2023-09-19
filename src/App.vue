@@ -2,7 +2,6 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Tags from './components/Tags.vue';
-// const tags = [{ title: 'popular' }, { title: 'new' }, { title: 'premium' }];
 const tags = [];
 for (let i = 0; i < 200; i++) {
   tags.push({
@@ -20,6 +19,7 @@ for (let i = 0; i < 200; i++) {
         :key="index"
         :title="tag.title"
         :id="tag.id"
+        :isPopular="1"
       />
     </div>
   </div>
