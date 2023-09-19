@@ -8,7 +8,6 @@
         'bg-sky-500': isPopular,
       },
     ]"
-    @click="handleClick(props.id)"
   >
     {{ props.title }}
   </div>

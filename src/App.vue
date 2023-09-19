@@ -2,6 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import Tags from './components/Tags.vue';
+const tagAtive = 1;
 const tags = [];
 for (let i = 0; i < 200; i++) {
   tags.push({
@@ -16,6 +17,7 @@ for (let i = 0; i < 200; i++) {
     <div class="h-[35px] flex flex-row gap-1.5 px-2.5">
       <Tags
         v-for="(tag, index) in tags"
+        v-model="tagAtive"
         :key="index"
         :title="tag.title"
         :id="tag.id"
