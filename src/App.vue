@@ -6,6 +6,7 @@ import Tags from './components/Tags.vue';
 const tags = [];
 for (let i = 0; i < 200; i++) {
   tags.push({
+    id: i,
     title: `popular ${i}`,
   });
 }
@@ -14,7 +15,12 @@ for (let i = 0; i < 200; i++) {
 <template>
   <div class="overflow-x-scroll w-full">
     <div class="h-[35px] flex flex-row gap-1.5 px-2.5">
-      <Tags v-for="(tag, index) in tags" :key="index" :title="tag.title" />
+      <Tags
+        v-for="(tag, index) in tags"
+        :key="index"
+        :title="tag.title"
+        :id="tag.id"
+      />
     </div>
   </div>
   <div
